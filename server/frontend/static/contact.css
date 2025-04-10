@@ -1,0 +1,55 @@
+/* Body Styles */
+
+.container {
+    padding: 10px 0;
+    display: grid;
+    grid-template: 
+                "a  a"
+                "b  c";
+    grid-gap: 20px;
+}
+
+.top-row {
+    grid-area: a;
+    padding-bottom: 5%;
+    border-bottom: 1.5px grey solid;
+}
+
+.top-img {
+    max-width: 850px;
+    max-height: 450px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+.right-column {
+    max-width: 600px;
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+}
+
+.left-column {
+    max-width: 300px;
+    margin: 0 auto;
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+    border-right: 1.5px grey solid;
+}
+  
+.regions {
+    padding-left: 0.5rem;
+}
+
+h4 {
+    padding-left: 0.5rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
