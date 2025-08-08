@@ -1,10 +1,23 @@
-FROM python:3.9.18-slim-bookworm
+# Base image
+FROM python:3.10-slim
 
+# Set working directory
+WORKDIR /app
 
-WORKDIR /python-docker
-
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+# Copy your app files
 COPY . .
-RUN ls
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Download NLTK data (if used)
+RUN python -m nltk.downloader vader_lexicon
+
+# Set environment variable for Flask
+ENV FLASK_APP=sentiment_analyzer.py
+
+# Expose port Flask will run on
+EXPOSE 5000
+
+# Run Flask
+CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
