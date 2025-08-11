@@ -1,0 +1,24 @@
+{
+  "name": "dealership",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwhitley11/dealership.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kwhitley11/dealership/issues"
+  },
+  "homepage": "https://github.com/kwhitley11/dealership#readme",
+  "devDependencies": {
+    "eslint": "^9.33.0"
+  }
+}
