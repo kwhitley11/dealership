@@ -19,9 +19,11 @@ spec:
       labels:
         run: dealership
     spec:
+      imagePullSecrets:
+      - name: icr-secret
       containers:
       - image: us.icr.io/kylewhitley/dealership:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: dealership
         ports:
         - containerPort: 8000
