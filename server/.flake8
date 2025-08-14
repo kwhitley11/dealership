@@ -1,0 +1,25 @@
+[flake8]
+# Folders and files to ignore
+exclude =
+    .git,
+    __pycache__,
+    venv,
+    .venv,
+    djangoenv,
+    migrations,
+    node_modules
+
+
+# Maximum line length for code
+max-line-length = 88
+
+# Ignore specific warnings (optional, adjust to taste)
+# E203: whitespace before ':', conflicts with Black
+# W503: line break before binary operator, conflicts with Black
+ignore = E203, W503
+
+# Show statistics at the end
+statistics = True
+
+# Number of reports to show
+max-complexity = 10
