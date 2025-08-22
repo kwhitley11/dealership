@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint server/frontend/src",
+    "lint:fix": "eslint server/frontend/src --fix"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,8 @@
   },
   "homepage": "https://github.com/kwhitley11/dealership#readme",
   "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "eslint": "^9.33.0",
+    "@eslint/js": "^9.34.0",
+    "eslint": "^9.34.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.3.0"
   }
