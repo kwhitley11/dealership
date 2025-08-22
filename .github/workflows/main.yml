@@ -36,19 +36,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
 
-      - name: Install JSHint
-        run: npm install -g jshint
+    - name: Install ESLint
+      run: npm install
 
-      - name: Run JavaScript Linter
-        run: |
-          # Lint only your JS source files, exclude node_modules
-          find ./server/database -name "*.js" -not -path "*/node_modules/*" -exec jshint {} +
-          echo "Linted all JavaScript files successfully"
+    - name: Run ESLint on backend
+      run: npx eslint server/database/**/*.js --fix
+
+    - name: Run ESLint on frontend
+      run: npx eslint server/frontend/src/**/*.js --fix

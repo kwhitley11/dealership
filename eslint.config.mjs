@@ -5,11 +5,10 @@ import globals from "globals";
 export default [
   // Ignore folders we don't want ESLint to scan
   {
-    ignores: [
-      "node_modules/**",
-      "server/frontend/build/**",
-      "server/frontend/dist/**"
-    ],
+  ignores: 
+    ["node_modules/**", 
+      "server/frontend/build/**", 
+      "server/frontend/dist/**"]
   },
 
   js.configs.recommended,

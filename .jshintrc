@@ -1,0 +1,4 @@
+{
+  "esversion": 8,   // allows ES2017 syntax (async/await)
+  "node": true       // if this is Node backend code
+}
